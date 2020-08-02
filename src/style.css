@@ -1,5 +1,4 @@
 body{
-	font-family: 'Open Sans',sans-serif;
 	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg);
 	overflow-x:hidden;
 	overflow-y:hidden;

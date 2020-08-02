@@ -29,11 +29,11 @@ for (var i = 0; i < operator.length; i++) {
             else
                 printOutput(getOutput().substr(0, getOutput().length - 1))
         }
-        if(this.id == "clear") {
-        	printHistory("");
-        	printOutput("");
-		}
-        if(getHistory()!=""){
+        if (this.id == "clear") {
+            printHistory("");
+            printOutput("");
+        }
+        if (getHistory() != "" && this.id == "=") {
             printOutput(eval(aux + getOutput()));
             printHistory("");
         }
@@ -43,9 +43,9 @@ for (var i = 0; i < operator.length; i++) {
 var number = document.getElementsByClassName("number");
 for (var i = 0; i < number.length; i++) {
     number[i].addEventListener('click', function () {
-        if (getOutput() == "")
+        if (getOutput() == "" && this.id != "0")
             printOutput(this.id);
-        else {
+        else if (getOutput() != "") {
             getOutput();
             printOutput(getOutput() + this.id);
         }
